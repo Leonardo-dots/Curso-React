@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+/* Navbar Styles */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    box-shadow: 0 0 20px 1px #bbb;
+}
+.navbar img{
+    width: 120px
+}
+/* ItemListContainer */
+
+.itemList{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 120px;
+    justify-content: center;
+}
+
+.item{
+    background-color: #ddd;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    max-height: 600px;
+}
+.item > h2{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.item > p{
+    overflow: hidden; /*NO ENCONTRE FORMA ALGUNA PARA HACER QUE EL TEXTO NO SE CORTE. Busque y creo que se podia hacer con JS pero me parecio un poco mucho.*/
+}
+.verMas{
+    width: fit-content;
+    padding: 8px 24px;
+    margin: 30px auto;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: #002;
+    color: white;
+    border-radius: 50px;
+}
+
+.item > img{
+    overflow: hidden;
+}
+
+/* Ver mas producto */
+
+.itemDetail{
+    margin: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background-color: whitesmoke;
+     border: 1px solid gray;
+     border-radius: 50px;
+}
+.itemDetailImg{
+    max-width: 40%;
+}
+.itemDetailImg > img{
+    width: 100%;
+}
+.itemDetailContainer{
+    width: 50%;
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.itemDetailContainer h2{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.itemDetailContainer h3{
+    font-size: 1.6rem;
+}
+.itemDetailContainer > p{
+    font-size: 1.1rem;
+    margin: 50px;
+}
+.compra{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.compra > span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.compra > button{
+    font-size: 1.6rem;
+    background-color: #002;
+    color: white;
+    padding: 16px 60px;
+    border-radius: 30px;
+}
