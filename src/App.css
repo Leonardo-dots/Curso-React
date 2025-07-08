@@ -14,7 +14,7 @@
     padding: 16px;
     letter-spacing: 1px;
     font-size: 1rem;
-    box-shadow: 0 0 20px 1px #bbb;
+    box-shadow: 0 0 20px 1px #bbb ;
 }
 .navbar img{
     width: 120px
@@ -29,8 +29,15 @@
     justify-content: center;
 }
 
+.trio{
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .item{
-    background-color: #ddd;
+    background-color: #eee;
     margin: 10px;
     padding: 20px;
     text-align: center;

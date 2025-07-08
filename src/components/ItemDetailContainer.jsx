@@ -2,15 +2,19 @@ import { useEffect, useState } from "react";
 import getProductos from "../mock/Productos";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { Loader } from "./Loader";
 
 export default function ItemDetailContainer(){
     const [detail, setDetail] = useState({})
-    const params = useParams()
+    const [loading, setLoading] = useState(false)
+    const {id} = useParams()
     useEffect(() => {
+        setLoading(true)
         getProductos()
-        .then(response => setDetail(response.find(item => item.id === params.id)))
+        .then(response => setDetail(response.find(item => item.id === id)))
+        .finally(()=> setLoading(false))
     },[])
     return(
-        <ItemDetail detail={detail}/>
+        <>{loading ? <Loader/> : <ItemDetail detail={detail}/> }</>
     )
 }
