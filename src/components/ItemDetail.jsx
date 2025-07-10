@@ -1,4 +1,5 @@
 import React from "react"
+import { ItemCount } from "./itemCount"
 
 export default function ItemDetail({detail}){
 
@@ -10,12 +11,12 @@ export default function ItemDetail({detail}){
             <div className="itemDetailContainer">
                 <h2>{detail.name}</h2>
                 <h3>{detail.category}</h3>
+                <strong>{detail.stock} Unidades disponibles</strong>
                 <p>{detail.description}</p>
                 <div className="compra">
-                    <span>${detail.price}</span>
-                    <button>Agregar al carrito</button>
-                </div>
-                
+                    <span>${detail?.price?.toLocaleString('es-AR')}</span>
+                    <ItemCount detail={detail}/>
+                </div>   
             </div>
         </div>
     )

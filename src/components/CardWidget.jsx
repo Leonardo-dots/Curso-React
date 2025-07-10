@@ -1,5 +1,7 @@
-export default function CardWidget(props){
+import { NavLink } from "react-router-dom";
+
+export default function CardWidget(){
     return(
-    <a href="">🛒</a>
-)
+        <NavLink>🛒</NavLink>
+    )
 } 

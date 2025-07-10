@@ -21,12 +21,10 @@ export default function ItemListContainer(){
         })
         .catch((error) => setData(error))
         .finally(() =>setLoading(false))
-        console.log(category)
     },[category])
     return(
         <>
         {loading ? <Loader/> : <ItemList data={data}></ItemList>}
-        
         </>
         
     )
