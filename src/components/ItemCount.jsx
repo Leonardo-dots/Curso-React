@@ -34,13 +34,16 @@ export function ItemCount({detail}){
     return (
         <>
         <div className="countContainer">
-            <button className="count" onClick={restar}>-</button>
-            <span>{count}</span>
-            <button className="count" onClick={sumar}>+</button>
+            {addedToCart ? ("") : 
+            (<div className="countContainer">
+                <button className="count" onClick={restar}>-</button>
+                <span>{count}</span>
+                <button className="count" onClick={sumar}>+</button>
+            </div>)}
         </div>
         <div className="buttonContainer">
             <ToastContainer />
-            {addedToCart ? (<Link className="toastify">Ir al carrito</Link>) : <button className="toastify" onClick={()=>{notify(); addToCart(detail, count); add();}}>Agregar al carrito</button>}
+            {addedToCart ? (<Link to="/cart" className="toastify">Ir al carrito</Link>) : <button className="toastify" onClick={()=>{notify(); addToCart(detail, count); add();}}>Agregar al carrito</button>}
         </div>
         </>
         

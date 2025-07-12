@@ -13,7 +13,7 @@ export default function ItemDetail({detail}){
                 <h3>{detail.category}</h3>
                 <strong>{detail.stock} Unidades disponibles</strong>
                 <p>{detail.description}</p>
-                <div className="compra">
+                <div className="detail">
                     <span>${detail?.price?.toLocaleString('es-AR')}</span>
                     <ItemCount detail={detail}/>
                 </div>   

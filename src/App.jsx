@@ -5,6 +5,8 @@ import Navbar from './components/Navbar'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import PageError from './components/Error'
 import { CartProvider } from './context/Context'
+import { CartContainer } from './components/CartContainer'
+import { Checkout } from './components/checkout'
 
 
 export default function App(){
@@ -16,7 +18,9 @@ export default function App(){
                 <Route path="/" element={<ItemListContainer/>}/>
                 <Route path="/categoria/:category" element={<ItemListContainer/>}/>
                 <Route path='/smartphone/:id' element={<ItemDetailContainer/>}/>
+                <Route path="/cart" element={<CartContainer/>}/>
                 <Route path='*' element={<PageError/>}/>
+                <Route path="/checkout" element={<Checkout/>}></Route>
             </Routes>
         </CartProvider>
         </BrowserRouter>

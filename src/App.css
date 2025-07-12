@@ -115,7 +115,11 @@
     font-size: 1.1rem;
     margin: 50px;
 }
-.compra{
+.itemDetailContainer span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.detail{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,11 +145,6 @@
     border-radius: 50px;
     cursor: pointer;
 }
-span{
-    font-size: 2rem;
-    font-weight: bolder;
-}
-
 .count{
     font-size: 1.4rem;
     background-color: #002;
@@ -154,4 +153,99 @@ span{
     color: white;
     border-radius: 50%;
     cursor: pointer;
+}
+.countWidget{
+    letter-spacing: normal;
+    font-size: 1rem;
+    padding: 1px 7px;
+    padding-bottom: 3px;
+    background-color: #003;
+    color: white;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+/*CardView*/
+
+.compra{
+    height: 200px;
+    margin: 30px auto;
+    border-radius: 10px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    position: relative;
+}
+.compra img{
+    margin-left: 50px;
+}
+.compraInfo{
+    padding: 20px 140px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.compraInfo > p{
+    height: 60px;
+    overflow: hidden;
+}
+.compraData{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.removeItem{
+    cursor: pointer;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    padding: 5px 6px 6px 5px;
+    height: 30px;
+    width: 30px;
+    background-color: #b00;
+    color: white;
+    border-radius: 50%;
+    border: none;
+}
+.finalizar{
+    display: flex;
+    justify-content: space-around;
+}
+.confirmar, .removeCart{
+    padding: 18px 40px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 16px;
+    border: none;
+    color: white;
+}
+.confirmar{
+    background-color: #003;
+}
+.removeCart{
+    background-color: rgb(172, 30, 30);
+}
+
+/*CheckOut*/
+.formContainer{
+    width: 80%;
+    margin: 50px auto;
+    padding: 10px 50px;
+    border-radius: 20px;
+    background-color: #ddd;
+}
+.formContainer > h2{
+    text-align: center;
+    margin: 14px;
+}
+.formContainer div{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
